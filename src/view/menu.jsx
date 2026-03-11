@@ -11,17 +11,16 @@ const SmashMenu = ({ onSelectProject }) => {
       
         <div className="relative col-start-1 col-span-10 row-start-2 row-span-11">
           <MenuBlock 
-          title="" 
+          title="PROJETS" 
           color="bg-red-700" 
           clipClass="clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
           onClick={onSelectProject}
-          className=""
           />
         </div>
         
         <div className="relative col-start-1 col-span-9 row-start-13 row-span-8 ">
           <MenuBlock 
-          title="" 
+          title="PARCOURS" 
           color="bg-green-600" 
           clipClass="clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
           />
@@ -31,21 +30,21 @@ const SmashMenu = ({ onSelectProject }) => {
       
         <div className="relative col-start-11 col-span-10 row-start-1 row-span-7">
           <MenuBlock 
-          title="" 
+          title="COMPÉTENCES" 
           color="bg-blue-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
         <div className="relative col-start-11 col-span-10 row-start-8 row-span-5">
           <MenuBlock 
-          title="" 
+          title="STAGE" 
           color="bg-pink-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
         <div className="relative col-start-10 col-span-9 row-start-13 row-span-8">
           <MenuBlock 
-          title="" 
+          title="CONTACT" 
           color="bg-yellow-600" 
           clipClass="[clip-path:url(#yellowCurve)]"
           />
