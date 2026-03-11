@@ -1,8 +1,9 @@
-const SideBar = ({color})=>{
+const SideBar = ({color, clipClass})=>{
     return(
         <>
-        <div className={`absolute inset-0 ${color} border flex flex-col z-10`}>
-
+        <div className={`h-full w-full ${color} ${clipClass}  flex flex-col z-40 relative shadow-2xl pointer-events-auto`}>
+            {/* Contenu de ta barre ici */}
+            
         </div>
         </>
     );
