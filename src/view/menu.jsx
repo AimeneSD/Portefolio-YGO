@@ -1,6 +1,7 @@
 // src/screens/SmashMenu.jsx
 import MenuBlock from "../components/ui/MenuBlock";
 import SideBar from "../components/ui/SideBar";
+import AvatarCircle from "../components/ui/AvatarCircle";
 //import AvatarPortal from "../components/ui/AvatarPortal";
 
 const SmashMenu = ({ onSelectProject }) => {
@@ -11,7 +12,7 @@ const SmashMenu = ({ onSelectProject }) => {
       
         <div className="relative col-start-1 col-span-10 row-start-2 row-span-11">
           <MenuBlock 
-          title="" 
+          title="PROJETS" 
           color="bg-red-700" 
           clipClass="clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
           onClick={onSelectProject}
@@ -21,7 +22,7 @@ const SmashMenu = ({ onSelectProject }) => {
         
         <div className="relative col-start-1 col-span-9 row-start-13 row-span-8 ">
           <MenuBlock 
-          title="" 
+          title="PARCOURS" 
           color="bg-green-600" 
           clipClass="clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
           />
@@ -31,23 +32,30 @@ const SmashMenu = ({ onSelectProject }) => {
       
         <div className="relative col-start-11 col-span-10 row-start-1 row-span-7">
           <MenuBlock 
-          title="" 
+          title="COMPETENCES" 
           color="bg-blue-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
         <div className="relative col-start-11 col-span-10 row-start-8 row-span-5">
           <MenuBlock 
-          title="" 
+          title="STAGE" 
           color="bg-pink-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
         <div className="relative col-start-10 col-span-9 row-start-13 row-span-8">
           <MenuBlock 
-          title="" 
+          title="CONTACT" 
           color="bg-yellow-600" 
           clipClass="[clip-path:url(#yellowCurve)]"
+          />
+        </div>
+
+        {/*Cercle d'avatar*/}
+
+        <div className="relative col-start-8 col-span-5 row-start-8 row-span-12">
+          <AvatarCircle color="bg-black" clipClass="[clip-path:url(#AvatarCircleArc)]"
           />
         </div>
 
@@ -90,6 +98,12 @@ const SmashMenu = ({ onSelectProject }) => {
            Q 0.02,1 0.05,0.97 
            Q 0.25,0.5 0.05,0.03  Q 0.02,0 0.15,0 
            Z" />
+          </clipPath>
+          <clipPath id="AvatarCircleArc" clipPathUnits="objectBoundingBox">
+            <path d="M 0.5,0
+            A 0.5,0.5 0 1,1 0.5,1
+            A 0.5,0.5 0 1,1 0.5,1
+            Z" />
           </clipPath>
         </defs>
       </svg>
