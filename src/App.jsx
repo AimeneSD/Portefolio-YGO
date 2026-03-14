@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SmashMenu from "./view/menu"; // Ton menu Smash
+import './App.css';
 
 function App() {
   // 1. Le "Switch" : On commence sur le menu

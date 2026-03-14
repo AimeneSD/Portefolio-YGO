@@ -1,6 +1,7 @@
 // src/screens/SmashMenu.jsx
 import MenuBlock from "../components/ui/MenuBlock";
 import SideBar from "../components/ui/SideBar";
+import AvatarCircle from "../components/ui/AvatarCircle";
 //import AvatarPortal from "../components/ui/AvatarPortal";
 
 const SmashMenu = ({ onSelectProject }) => {
@@ -50,6 +51,13 @@ const SmashMenu = ({ onSelectProject }) => {
           />
         </div>
 
+        {/*Cercle d'avatar*/}
+
+        <div className="relative col-start-8 col-span-5 row-start-8 row-span-12">
+          <AvatarCircle color="bg-black" clipClass="[clip-path:url(#AvatarCircleArc)]"
+          />
+        </div>
+
         {/*BARRE LATÉRALE*/}
 
         <div className=" relative col-start-19 col-span-2 row-start-1 pointer-events-none row-span-20 filter z-40">
@@ -89,6 +97,12 @@ const SmashMenu = ({ onSelectProject }) => {
            Q 0.02,1 0.05,0.97 
            Q 0.25,0.5 0.05,0.03  Q 0.02,0 0.15,0 
            Z" />
+          </clipPath>
+          <clipPath id="AvatarCircleArc" clipPathUnits="objectBoundingBox">
+            <path d="M 0.5,0
+            A 0.5,0.5 0 1,1 0.5,1
+            A 0.5,0.5 0 1,1 0.5,1
+            Z" />
           </clipPath>
         </defs>
       </svg>
