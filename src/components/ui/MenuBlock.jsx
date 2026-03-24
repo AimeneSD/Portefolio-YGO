@@ -4,7 +4,7 @@ const MenuBlock = ({ title, color, clipClass, onClick }) => {
     <div
       onClick={onClick}
       className={`absolute inset-0 ${color} cursor-pointer transition-all duration-500 
-                  hover:brightness-125 hover:scale-[1.015] z-10 ${clipClass}
+                  hover:brightness-125  z-10 ${clipClass}
                   flex items-center justify-center group`}
     >
       {/* Le texte qui s'anime au survol */}

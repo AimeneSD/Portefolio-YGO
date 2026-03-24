@@ -1,9 +1,8 @@
 const AvatarCircle = ({color, clipClass}) => {
     return (
-        <div className={`absolute inset-0 ${color} cursor-pointer transition-all duration-500 
-                  hover:brightness-125 hover:scale-[1.015] z-35 ${clipClass}
-                  flex items-center justify-center group`}>
-
+        <div className={`absolute inset-0 ${color} transition-all duration-500 z-100 ${clipClass}
+                  flex items-center justify-center`}>
+            <img src="/src/assets/portfolio_icon.webp" alt="" className="w-[80%] h-[80%] object-contain"/>
         </div>
     )
 }

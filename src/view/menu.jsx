@@ -1,16 +1,17 @@
 // src/screens/SmashMenu.jsx
 import MenuBlock from "../components/ui/MenuBlock";
 import SideBar from "../components/ui/SideBar";
+import AvatarBlackCircle from "../components/ui/AvatarBlackCircle";
 import AvatarCircle from "../components/ui/AvatarCircle";
 //import AvatarPortal from "../components/ui/AvatarPortal";
 
 const SmashMenu = ({ onSelectProject }) => {
   return (
-    <div className="relative h-screen w-full bg-black  grid grid-cols-20 grid-rows-20 gap-5 overflow-hidden">
+    <div className="relative h-screen w-full bg-black  grid grid-cols-50 grid-rows-50 gap-5 overflow-hidden">
       
       {/* 2. COLONNE GAUCHE (Subgrid 2 lignes) */}
       
-        <div className="relative col-start-1 col-span-10 row-start-2 row-span-11">
+        <div className="relative col-start-1 col-span-25 row-start-3 row-span-28">
           <MenuBlock 
           title="PROJETS" 
           color="bg-red-700" 
@@ -19,7 +20,7 @@ const SmashMenu = ({ onSelectProject }) => {
           />
         </div>
         
-        <div className="relative col-start-1 col-span-9 row-start-13 row-span-8 ">
+        <div className="relative col-start-1 col-span-23 row-start-31 row-span-20 ">
           <MenuBlock 
           title="PARCOURS" 
           color="bg-green-600" 
@@ -29,21 +30,21 @@ const SmashMenu = ({ onSelectProject }) => {
 
       {/* 3. COLONNE DROITE (Subgrid 3 lignes) */}
       
-        <div className="relative col-start-11 col-span-10 row-start-1 row-span-7">
+        <div className="relative col-start-26 col-span-25 row-start-1 row-span-18">
           <MenuBlock 
           title="COMPÉTENCES" 
           color="bg-blue-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
-        <div className="relative col-start-11 col-span-10 row-start-8 row-span-5">
+        <div className="relative col-start-26 col-span-25 row-start-19 row-span-12">
           <MenuBlock 
           title="STAGE" 
           color="bg-pink-700" 
           clipClass="clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)"
           />
         </div>
-        <div className="relative col-start-10 col-span-9 row-start-13 row-span-8">
+        <div className="relative col-start-24 col-span-22 row-start-31 row-span-20">
           <MenuBlock 
           title="CONTACT" 
           color="bg-yellow-600" 
@@ -51,22 +52,26 @@ const SmashMenu = ({ onSelectProject }) => {
           />
         </div>
 
-        {/*Cercle d'avatar*/}
+        {/*Cercle contour noir d'avatar*/}
 
-        <div className="relative col-start-8 col-span-5 row-start-8 row-span-12">
-          <AvatarCircle color="bg-black" clipClass="[clip-path:url(#AvatarCircleArc)]"
+        <div className="relative col-start-19 col-span-15 row-start-11 row-span-28">
+          <AvatarBlackCircle color="bg-black" clipClass="[clip-path:url(#AvatarBlackCircleArc)]"
           />
+        </div>
+
+        <div className="relative col-start-20 col-span-13 row-start-13 row-span-24">
+          <AvatarCircle color="bg-white" clipClass="[clip-path:url(#AvatarCircleArc)]"/>
         </div>
 
         {/*BARRE LATÉRALE*/}
 
-        <div className=" relative col-start-19 col-span-2 row-start-1 pointer-events-none row-span-20 filter z-40">
+        <div className=" relative col-start-46 col-span-5 row-start-1 pointer-events-none row-span-50 filter z-40">
           <SideBar
           color="bg-black"
           clipClass="[clip-path:url(#sidebarCurve)]"
           />
         </div>
-        <div className=" relative col-start-19 col-span-2 row-start-1 pointer-events-none row-span-20 filter z-39">
+        <div className=" relative col-start-46 col-span-5 row-start-1 pointer-events-none row-span-50 filter z-39">
           <SideBar
           color="bg-gray-400"
           clipClass="[clip-path:url(#BorderSidebarCurve)]"
@@ -98,10 +103,16 @@ const SmashMenu = ({ onSelectProject }) => {
            Q 0.25,0.5 0.05,0.03  Q 0.02,0 0.15,0 
            Z" />
           </clipPath>
+          <clipPath id="AvatarBlackCircleArc" clipPathUnits="objectBoundingBox">
+            <path d="M 0.5,0
+            A 0.5,0.5 0 1,1 0.5,1
+            A 0.5,0.5 0 1,1 0.5,0
+            Z" />
+          </clipPath>
           <clipPath id="AvatarCircleArc" clipPathUnits="objectBoundingBox">
             <path d="M 0.5,0
             A 0.5,0.5 0 1,1 0.5,1
-            A 0.5,0.5 0 1,1 0.5,1
+            A 0.5,0.5 0 1,1 0.5,0
             Z" />
           </clipPath>
         </defs>
