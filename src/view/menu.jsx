@@ -3,11 +3,12 @@ import MenuBlock from "../components/ui/MenuBlock";
 import SideBar from "../components/ui/SideBar";
 import AvatarBlackCircle from "../components/ui/AvatarBlackCircle";
 import AvatarCircle from "../components/ui/AvatarCircle";
+import WhiteAngle from "../components/ui/WhiteAngle";
 //import AvatarPortal from "../components/ui/AvatarPortal";
 
 const SmashMenu = ({ onSelectProject }) => {
   return (
-    <div className="relative h-screen w-full bg-black  grid grid-cols-50 grid-rows-50 gap-5 overflow-hidden">
+    <div className="relative h-screen w-full bg-black  grid grid-cols-50 grid-rows-50 gap-x-7 gap-y-3 overflow-hidden">
       
       {/* 2. COLONNE GAUCHE (Subgrid 2 lignes) */}
       
@@ -18,6 +19,9 @@ const SmashMenu = ({ onSelectProject }) => {
           clipClass="clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
           onClick={onSelectProject}
           />
+        </div>
+        <div className="relative col-start-16 col-span-10 row-start-9 row-span-22 ">
+          <WhiteAngle clipClass="[clip-path:url(#ProjetsWhiteAngle)]"/>
         </div>
         
         <div className="relative col-start-1 col-span-23 row-start-31 row-span-20 ">
@@ -71,6 +75,7 @@ const SmashMenu = ({ onSelectProject }) => {
           clipClass="[clip-path:url(#sidebarCurve)]"
           />
         </div>
+        
         <div className=" relative col-start-46 col-span-5 row-start-1 pointer-events-none row-span-50 filter z-39">
           <SideBar
           color="bg-gray-400"
@@ -114,6 +119,16 @@ const SmashMenu = ({ onSelectProject }) => {
             A 0.5,0.5 0 1,1 0.5,1
             A 0.5,0.5 0 1,1 0.5,0
             Z" />
+          </clipPath>
+          <clipPath id="ProjetsWhiteAngle" clipPathUnits="objectBoundingBox">
+            <path d="M 1,0
+            L 1,1
+            L 0.38,1
+            Q 0.1,0.2  1,0.08
+            Z" 
+            
+            
+            />
           </clipPath>
         </defs>
       </svg>
